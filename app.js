@@ -43,7 +43,7 @@ app.use((error, req, res, next) => {
 
 mongoose.connect(`mongodb+srv://usama:usama@cluster0.r4fkm.mongodb.net/places?retryWrites=true&w=majority`, {useNewUrlParser: true, useUnifiedTopology: true}).then(() => {
     console.log('Connected');
-    app.listen(5001);
+    app.listen(process.env.PORT || 5001);
 }).catch(err => {
     console.log(err);
 });
