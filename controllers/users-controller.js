@@ -88,7 +88,7 @@ const login = async (req, res, next) => {
     }
 
     if (!identifiedUser) {
-        return next(new HttpError('Invalid password', 500));
+        return next(new HttpError('Invalid email', 500));
     }
 
     let isValidPassword = false;
